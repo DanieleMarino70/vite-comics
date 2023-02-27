@@ -63,7 +63,7 @@ export default {
 
 <style lang="scss" scoped>
 header{
-    background-color: wheat;
+    background-color: white;
 
     .container{
         display: flex;
