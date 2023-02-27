@@ -65,7 +65,18 @@ export default {
 
         <div class="footer-bottom">
             <div class="container">
+                <ul>
+                    <li><a href="" class="button outline-primary">SIGN UP NOW!</a></li>
+                </ul>
 
+                <ul>
+                    <li><h2>FOLLOW US</h2></li>
+                    <li><img src="../assets/img/footer-facebook.png" alt=""></li>
+                    <li><img src="../assets/img/footer-twitter.png" alt=""></li>
+                    <li><img src="../assets/img/footer-youtube.png" alt=""></li>
+                    <li><img src="../assets/img/footer-pinterest.png" alt=""></li>
+                    <li><img src="../assets/img/footer-periscope.png" alt=""></li>
+                </ul>
             </div>
         </div>
     </footer>
@@ -119,7 +130,40 @@ export default {
         }
     }
 
+   
 
 }
 
+.footer-bottom{
+    height: 100px;
+    background-color: rgb(80,80,80);
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        ul{
+            display: flex;
+
+            li{
+                align-self: center;
+                margin: 0 10px;
+
+                h2{
+                    color: #0282f9;
+                }
+
+                .button.outline-primary{
+                    color: white;
+                    text-decoration: none;
+                    
+                    padding: 10px;
+                    border: 2px solid #0282f9;
+                }
+            }
+        }
+    }
+}
 </style>
