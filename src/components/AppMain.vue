@@ -41,7 +41,7 @@ main{
         .row{
             display: flex;
             flex-wrap: wrap;
-            padding: 10px;
+            
         }
     }
 }

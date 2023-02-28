@@ -14,9 +14,7 @@ export default {
 <template>
     
     <div class="col" :comic="comic">
-        <div class="img-container">
-            <img :src="comic.thumb" alt="">
-        </div>
+        <img :src="comic.thumb" alt="">
         <h2>{{ comic.series }}</h2>
     </div>
       
@@ -24,19 +22,16 @@ export default {
 
 <style lang="scss" scoped>
     .col{
-        width: calc(100% / 6 - 20px);
-        text-align: center;
+        padding: 5px;
+        width: calc(100% / 6);
+        min-height: 100px;
         
-        .img-container{
-            display: inline-block;
-            width:150px;
+        img{
+            width: 100%;
             height: 150px;
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+            object-fit: cover;
         
-            }
+            
         }
 
         h2{
