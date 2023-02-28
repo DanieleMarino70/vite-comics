@@ -1,16 +1,27 @@
 <script>
+import cardMain from './cardMain.vue'
 export default {
     data() {
         return {
         }
     },
+    props:{
+        comics: Array,
+    },
+    components:{cardMain}
 
 };
 </script>
 
 <template>
     <main>
-        <div class="container"> Content goes here </div>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <cardMain v-for="comic in comics" :comic="comic" />
+                </div>
+            </div>
+        </div>
 
     
     </main>
@@ -18,11 +29,22 @@ export default {
 
 <style lang="scss" scoped>
 main{
+    background-color: rgb(50,50,50);
     // debug
-line-height: 100px;
-background-color: rgb(50,50,50);
-color: white;
-font-size: 1.3rem;
+
+
+
+
+.jumbotron{
+    .container{
+        
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+    }
+}
 
 }
 </style>

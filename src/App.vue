@@ -3,10 +3,15 @@ import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import AppMain from './components/AppMain.vue'
 import AppBlueMenu from './components/AppBlueMenu.vue';
+
+
+import headerLinks from './data/headerLinks.js'
+import comics from './data/comics.js'
 export default{
   data(){
     return{
-
+      headerLinks,
+      comics,
     }
   },
   components: { AppHeader, AppFooter, AppMain, AppBlueMenu }
@@ -14,9 +19,9 @@ export default{
 </script>
 
 <template>
- <AppHeader/>
+ <AppHeader :headerLinks="headerLinks"/>
  
- <AppMain/>
+ <AppMain :comics="comics"/>
 
  <AppBlueMenu/>
     
@@ -41,5 +46,7 @@ ul {
 li{
   text-decoration: none;
 }
+
+
 
 </style>
